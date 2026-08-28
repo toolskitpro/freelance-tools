@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://toolskitpro.github.io/freelance-tools/sitemap.xml
+
+# Admin panel - do not index
+Disallow: /admin.html

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToolsKitPro | Free Online Calculators & Tools for Freelancers</title>
+    <meta name="description" content="Free online calculators and tools for freelancers, self-employed professionals, and independent workers in the US, UK, and Canada. No signup required.">
+    <meta name="keywords" content="freelance tools, online calculators, hourly rate calculator, freelancer resources, self employed tools">
+    <meta name="author" content="ToolsKitPro">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://toolskitpro.github.io/freelance-tools/">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+        header {
+            text-align: center;
+            color: white;
+            padding: 50px 20px 30px;
+        }
+        header h1 { font-size: 2.8rem; margin-bottom: 12px; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        header p { font-size: 1.2rem; opacity: 0.95; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+        .stat { text-align: center; }
+        .stat .num { font-size: 1.8rem; font-weight: 800; }
+        .stat .label { font-size: 0.9rem; opacity: 0.9; }
+
+        .ad-slot {
+            background: rgba(255,255,255,0.15);
+            border: 2px dashed rgba(255,255,255,0.3);
+            text-align: center;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 728px;
+            border-radius: 8px;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        .tool-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        .tool-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .tool-card h3 { color: #764ba2; font-size: 1.3rem; margin-bottom: 10px; }
+        .tool-card p { color: #666; line-height: 1.6; font-size: 0.95rem; }
+        .tool-card .tag {
+            display: inline-block;
+            background: #f0e6ff;
+            color: #764ba2;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+        .tool-card.coming-soon {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .features {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        .features h2 { color: #764ba2; margin-bottom: 25px; text-align: center; font-size: 1.6rem; }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+        .feature-item .icon { font-size: 2rem; margin-bottom: 10px; }
+        .feature-item h4 { color: #333; margin-bottom: 8px; }
+        .feature-item p { color: #777; font-size: 0.9rem; }
+
+        .ad-slot-dark {
+            background: rgba(0,0,0,0.2);
+            border: 2px dashed rgba(255,255,255,0.3);
+            text-align: center;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 728px;
+            border-radius: 8px;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 40px 20px 20px;
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+        footer a { color: #ffd700; text-decoration: none; margin: 0 10px; }
+        footer a:hover { text-decoration: underline; }
+        .footer-links { margin-bottom: 15px; }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            header p { font-size: 1rem; }
+            .tools-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛠️ ToolsKitPro</h1>
+            <p>Free, accurate online calculators and tools built for freelancers, self-employed professionals, and independent workers across the US, UK, and Canada.</p>
+            <div class="stats-bar">
+                <div class="stat"><div class="num">100%</div><div class="label">Free Forever</div></div>
+                <div class="stat"><div class="num">0</div><div class="label">Signups Needed</div></div>
+                <div class="stat"><div class="num">3</div><div class="label">Countries Covered</div></div>
+                <div class="stat"><div class="num">∞</div><div class="label">Calculations</div></div>
+            </div>
+        </header>
+
+        <!-- ADSENSE AD SLOT #1: Top Banner (728x90 or responsive) -->
+        <div class="ad-slot" id="ad-slot-top">
+            📢 AdSense Ad Slot #1 — Paste your AdSense code here<br>
+            <small>Recommended: Responsive display ad or 728x90 leaderboard</small>
+        </div>
+
+        <div class="tools-grid">
+            <a href="freelance-hourly-rate-calculator.html" class="tool-card">
+                <div class="tool-icon">💰</div>
+                <h3>Freelance Hourly Rate Calculator</h3>
+                <p>Calculate your ideal hourly rate based on your salary goals, taxes, expenses, and vacation time. Supports USD, GBP, and CAD.</p>
+                <span class="tag">LIVE NOW</span>
+            </a>
+
+            <div class="tool-card coming-soon">
+                <div class="tool-icon">📄</div>
+                <h3>Invoice Generator (PDF)</h3>
+                <p>Create professional PDF invoices in seconds. Add your logo, client details, line items, and download instantly.</p>
+                <span class="tag">COMING SOON</span>
+            </div>
+
+            <div class="tool-card coming-soon">
+                <div class="tool-icon">📊</div>
+                <h3>Self-Employment Tax Estimator</h3>
+                <p>Estimate your tax liability for US, UK, and Canada. Factor in federal, state, and self-employment taxes.</p>
+                <span class="tag">COMING SOON</span>
+            </div>
+
+            <div class="tool-card coming-soon">
+                <div class="tool-icon">🎯</div>
+                <h3>Project Quote Calculator</h3>
+                <p>Price your freelance projects confidently. Calculate fixed-price quotes based on scope, complexity, and timeline.</p>
+                <span class="tag">COMING SOON</span>
+            </div>
+
+            <div class="tool-card coming-soon">
+                <div class="tool-icon">🌍</div>
+                <h3>Client Time Zone Planner</h3>
+                <p>Plan meetings across time zones. Convert your local time to your client's time zone instantly.</p>
+                <span class="tag">COMING SOON</span>
+            </div>
+
+            <div class="tool-card coming-soon">
+                <div class="tool-icon">🏦</div>
+                <h3>Freelance Savings Planner</h3>
+                <p>Plan for irregular income. Set savings goals, emergency funds, and tax reserves based on your freelance earnings.</p>
+                <span class="tag">COMING SOON</span>
+            </div>
+
+            <div class="tool-card coming-soon">
+                <div class="tool-icon">📝</div>
+                <h3>Contract Template Generator</h3>
+                <p>Generate basic freelance agreement templates. Customize clauses, payment terms, and deliverables.</p>
+                <span class="tag">COMING SOON</span>
+            </div>
+        </div>
+
+        <!-- ADSENSE AD SLOT #2: Middle Banner -->
+        <div class="ad-slot-dark" id="ad-slot-middle">
+            📢 AdSense Ad Slot #2 — Paste your AdSense code here<br>
+            <small>Recommended: Responsive display ad or 336x280 large rectangle</small>
+        </div>
+
+        <div class="features">
+            <h2>Why Freelancers Choose ToolsKitPro</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="icon">🔒</div>
+                    <h4>100% Private</h4>
+                    <p>All calculations happen in your browser. We never store your financial data.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">⚡</div>
+                    <h4>Instant Results</h4>
+                    <p>No loading screens, no waiting. Get answers in milliseconds.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">📱</div>
+                    <h4>Mobile Friendly</h4>
+                    <p>Works perfectly on phones, tablets, and desktops.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">🌐</div>
+                    <h4>Multi-Currency</h4>
+                    <p>Support for USD, GBP, and CAD with country-specific tax rates.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ADSENSE AD SLOT #3: Bottom Banner -->
+        <div class="ad-slot-dark" id="ad-slot-bottom">
+            📢 AdSense Ad Slot #3 — Paste your AdSense code here<br>
+            <small>Recommended: Responsive display ad or 728x90 leaderboard</small>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="admin.html">🔐 Admin</a>
+            </div>
+            <p>© 2026 ToolsKitPro. Built for freelancers worldwide.</p>
+        </footer>
+    </div>
+
+    <!-- Google Analytics (Optional - replace GA_MEASUREMENT_ID with your real ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | ToolsKitPro</title>
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+        .login-box {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .login-box h1 { margin-bottom: 10px; color: #667eea; }
+        .login-box p { color: #aaa; margin-bottom: 25px; }
+        input[type="password"] {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            outline: none;
+        }
+        input[type="password"]:focus { border-color: #667eea; }
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover { transform: translateY(-2px); }
+        .error { color: #ff6b6b; margin-top: 10px; display: none; }
+
+        .dashboard {
+            display: none;
+            width: 90%;
+            max-width: 900px;
+            padding: 20px;
+        }
+        .dash-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .dash-header h1 { color: #667eea; }
+        .logout-btn {
+            background: #ff6b6b;
+            padding: 10px 25px;
+            width: auto;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+        }
+        .stat-card .num { font-size: 2rem; font-weight: 800; color: #667eea; }
+        .stat-card .label { color: #aaa; margin-top: 5px; }
+        .tools-table {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 25px;
+            overflow-x: auto;
+        }
+        .tools-table h2 { margin-bottom: 20px; color: #667eea; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        th { color: #667eea; font-weight: 600; }
+        td { color: #ccc; }
+        .status-live { color: #38ef7d; font-weight: 600; }
+        .status-soon { color: #ffd700; font-weight: 600; }
+        .ad-code-box {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+        .ad-code-box h2 { color: #667eea; margin-bottom: 15px; }
+        .ad-code-box textarea {
+            width: 100%;
+            height: 100px;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            color: #0f0;
+            font-family: monospace;
+            padding: 10px;
+            resize: vertical;
+        }
+        .ad-code-box p { color: #aaa; font-size: 0.9rem; margin-bottom: 10px; }
+        .note {
+            background: rgba(255,215,0,0.1);
+            border-left: 4px solid #ffd700;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 20px;
+            color: #ffd700;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box" id="loginBox">
+        <h1>🔐 Admin Panel</h1>
+        <p>ToolsKitPro Management Dashboard</p>
+        <input type="password" id="password" placeholder="Enter admin password">
+        <button onclick="checkPassword()">Login</button>
+        <p class="error" id="errorMsg">❌ Wrong password. Try again.</p>
+    </div>
+
+    <div class="dashboard" id="dashboard">
+        <div class="dash-header">
+            <h1>🛠️ ToolsKitPro Admin</h1>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="num">1</div>
+                <div class="label">Live Tools</div>
+            </div>
+            <div class="stat-card">
+                <div class="num">6</div>
+                <div class="label">Coming Soon</div>
+            </div>
+            <div class="stat-card">
+                <div class="num">7</div>
+                <div class="label">Total Planned</div>
+            </div>
+            <div class="stat-card">
+                <div class="num">3</div>
+                <div class="label">Ad Slots Ready</div>
+            </div>
+        </div>
+
+        <div class="tools-table">
+            <h2>📋 Tools Status</h2>
+            <table>
+                <tr>
+                    <th>Tool</th>
+                    <th>Status</th>
+                    <th>File</th>
+                    <th>SEO Keywords</th>
+                </tr>
+                <tr>
+                    <td>💰 Hourly Rate Calculator</td>
+                    <td class="status-live">✅ LIVE</td>
+                    <td>freelance-hourly-rate-calculator.html</td>
+                    <td>freelance hourly rate calculator 2026</td>
+                </tr>
+                <tr>
+                    <td>📄 Invoice Generator</td>
+                    <td class="status-soon">⏳ PENDING</td>
+                    <td>invoice-generator.html</td>
+                    <td>free invoice generator pdf, freelance invoice</td>
+                </tr>
+                <tr>
+                    <td>📊 Tax Estimator</td>
+                    <td class="status-soon">⏳ PENDING</td>
+                    <td>tax-estimator.html</td>
+                    <td>self employment tax calculator, freelance tax</td>
+                </tr>
+                <tr>
+                    <td>🎯 Quote Calculator</td>
+                    <td class="status-soon">⏳ PENDING</td>
+                    <td>quote-calculator.html</td>
+                    <td>freelance project quote calculator</td>
+                </tr>
+                <tr>
+                    <td>🌍 Time Zone Planner</td>
+                    <td class="status-soon">⏳ PENDING</td>
+                    <td>timezone-planner.html</td>
+                    <td>client time zone converter, meeting planner</td>
+                </tr>
+                <tr>
+                    <td>🏦 Savings Planner</td>
+                    <td class="status-soon">⏳ PENDING</td>
+                    <td>savings-planner.html</td>
+                    <td>freelance savings calculator, irregular income</td>
+                </tr>
+                <tr>
+                    <td>📝 Contract Generator</td>
+                    <td class="status-soon">⏳ PENDING</td>
+                    <td>contract-generator.html</td>
+                    <td>freelance contract template free</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="ad-code-box">
+            <h2>📢 AdSense Code Reference</h2>
+            <p><strong>Slot #1 (Top Banner):</strong> Replace content inside &lt;div id="ad-slot-top"&gt; on index.html and tool pages</p>
+            <textarea readonly>&lt;!-- Paste your AdSense responsive ad code here --&gt;
+&lt;ins class="adsbygoogle" style="display:block" ... &gt;&lt;/ins&gt;</textarea>
+
+            <p style="margin-top:15px"><strong>Slot #2 (Middle):</strong> Replace content inside &lt;div id="ad-slot-middle"&gt;</p>
+            <textarea readonly>&lt;!-- Paste your AdSense responsive ad code here --&gt;</textarea>
+
+            <p style="margin-top:15px"><strong>Slot #3 (Bottom):</strong> Replace content inside &lt;div id="ad-slot-bottom"&gt;</p>
+            <textarea readonly>&lt;!-- Paste your AdSense responsive ad code here --&gt;</textarea>
+        </div>
+
+        <div class="note">
+            <strong>⚠️ Note:</strong> This is a client-side admin panel. The password is not truly secure (visible in page source). For production, use server-side auth. This panel is for your personal reference only.
+        </div>
+    </div>
+
+    <script>
+        const ADMIN_PASSWORD = "toolskitpro2026";
+
+        function checkPassword() {
+            const input = document.getElementById('password').value;
+            if (input === ADMIN_PASSWORD) {
+                document.getElementById('loginBox').style.display = 'none';
+                document.getElementById('dashboard').style.display = 'block';
+                sessionStorage.setItem('adminLoggedIn', 'true');
+            } else {
+                document.getElementById('errorMsg').style.display = 'block';
+            }
+        }
+
+        function logout() {
+            sessionStorage.removeItem('adminLoggedIn');
+            location.reload();
+        }
+
+        if (sessionStorage.getItem('adminLoggedIn') === 'true') {
+            document.getElementById('loginBox').style.display = 'none';
+            document.getElementById('dashboard').style.display = 'block';
+        }
+
+        document.getElementById('password').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') checkPassword();
+        });
+    </script>
+</body>
+</html>

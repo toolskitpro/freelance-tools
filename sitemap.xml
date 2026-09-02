@@ -32,6 +32,18 @@
   </url>
   <url>
     <loc>https://toolskitpro.github.io/freelance-tools/contact.html</loc>
+      <url>
+    <loc>https://toolskitpro.github.io/freelance-tools/how-to-calculate-freelance-hourly-rate.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://toolskitpro.github.io/freelance-tools/free-invoice-generator-for-freelancers.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
     <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

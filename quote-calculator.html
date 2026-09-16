@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freelance Project Quote Calculator - Free Tool | ToolsKitPro</title>
+<meta name="description" content="Free freelance project quote calculator. Estimate your project price in minutes based on hours, hourly rate, complexity and rush fees.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://toolskitpro.github.io/freelance-tools/quote-calculator.html"/>
+<meta name="google-site-verification" content="G2RvYUgEXyJfkkbSqS1L2VYKGgGc_I3PPemjuFxNY9I"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial,Helvetica,sans-serif;background:#f5f7fa;color:#333;line-height:1.6;}
+.container{max-width:800px;margin:0 auto;padding:20px;}
+header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:30px 20px;text-align:center;border-radius:0 0 12px 12px;margin-bottom:25px;}
+header h1{font-size:1.6rem;margin-bottom:8px;}
+header p{opacity:.9;font-size:.95rem;}
+nav{margin-top:12px;}
+nav a{color:#fff;text-decoration:none;font-size:.9rem;margin:0 8px;border-bottom:1px solid rgba(255,255,255,.5);}
+.card{background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 10px rgba(0,0,0,.06);margin-bottom:20px;}
+.card h2{color:#764ba2;margin-bottom:15px;font-size:1.2rem;}
+label{display:block;font-weight:bold;margin:14px 0 5px;font-size:.9rem;}
+input,select,textarea{width:100%;padding:11px;border:1px solid #ddd;border-radius:8px;font-size:1rem;font-family:inherit;}
+input:focus,select:focus{outline:none;border-color:#667eea;}
+.hint{font-size:.8rem;color:#888;margin-top:3px;}
+button{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;padding:13px 28px;border-radius:8px;font-size:1rem;cursor:pointer;margin-top:18px;font-weight:bold;}
+button:hover{opacity:.9;}
+.result-box{background:#f0edfa;border:1px solid #d6ccf0;border-radius:10px;padding:20px;margin-top:20px;display:none;}
+.result-box h3{color:#764ba2;margin-bottom:10px;}
+.result-line{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #e2dcf5;font-size:.95rem;}
+.result-line.total{font-size:1.25rem;font-weight:bold;color:#4a3b8c;border-bottom:none;border-top:2px solid #764ba2;margin-top:6px;padding-top:12px;}
+.result-box small{display:block;color:#666;margin-top:10px;}
+.phase-box{background:#fff;border:1px solid #e2dcf5;border-radius:8px;padding:14px;margin-top:14px;font-size:.9rem;}
+.ad-slot{background:#fafafa;border:2px dashed #ccc;border-radius:8px;text-align:center;padding:14px;margin:20px 0;color:#999;font-size:.85rem;}
+table{width:100%;border-collapse:collapse;margin-top:10px;font-size:.85rem;}
+th,td{border:1px solid #e2dcf5;padding:8px;text-align:left;}
+th{background:#f0edfa;color:#4a3b8c;}
+footer{text-align:center;padding:25px 10px;color:#888;font-size:.85rem;}
+footer a{color:#667eea;text-decoration:none;margin:0 6px;}
+@media(max-width:600px){.container{padding:12px;}header h1{font-size:1.3rem;}}
+</style>
+</head>
+<body>
+<header>
+<h1>Freelance Project Quote Calculator</h1>
+<p>Price your next freelance project with confidence.</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="freelance-hourly-rate-calculator.html">Hourly Rate</a>
+<a href="invoice-generator.html">Invoice Generator</a>
+<a href="tax-estimator.html">Tax Estimator</a>
+</nav>
+</header>
+
+<div class="container">
+
+<!-- AD SLOT 1: paste your AdSense code here when approved -->
+
+<div class="card">
+<h2>Project Details</h2>
+
+<label for="projectName">Project name (optional)</label>
+<input type="text" id="projectName" placeholder="e.g. Company website redesign">
+
+<label for="projectType">Project type</label>
+<select id="projectType">
+<option value="1.0">General / Other</option>
+<option value="1.1">Web design or development</option>
+<option value="1.0">Content writing</option>
+<option value="1.2">Video editing</option>
+<option value="1.3">Graphic design</option>
+<option value="1.5">SEO or marketing</option>
+<option value="1.4">Mobile app development</option>
+</select>
+
+<label for="hours">Estimated total hours</label>
+<input type="number" id="hours" placeholder="e.g. 40" min="1">
+<div class="hint">Break the project into small tasks and estimate each one, then add them up.</div>
+
+<label for="rate">Your hourly rate (USD)</label>
+<input type="number" id="rate" placeholder="e.g. 35" min="1">
+<div class="hint">Not sure? Use our <a href="freelance-hourly-rate-calculator.html">Hourly Rate Calculator</a> first.</div>
+
+<label for="complexity">Project complexity</label>
+<select id="complexity">
+<option value="1.0">Standard - clear requirements, no surprises</option>
+<option value="1.15">Medium - some unclear parts, some research needed</option>
+<option value="1.3">High - new technology, tight deadline, unclear scope</option>
+</select>
+
+<label for="revisions">Included revision rounds</label>
+<select id="revisions">
+<option value="0">No extra charge (baked into rate)</option>
+<option value="50">1 extra round (+$50 buffer)</option>
+<option value="120">2-3 rounds (+$120 buffer)</option>
+<option value="250">Unlimited rounds (+$250 buffer)</option>
+</select>
+
+<label for="expenses">Direct expenses (tools, stock, plugins, USD)</label>
+<input type="number" id="expenses" placeholder="e.g. 25" min="0" value="0">
+
+<label for="rush">Rush fee</label>
+<select id="rush">
+<option value="0">Normal timeline - no rush fee</option>
+<option value="0.15">Slight rush (+15%)</option>
+<option value="0.25">Hard deadline (+25%)</option>
+<option value="0.5">Emergency - next day (+50%)</option>
+</select>
+</div>
+
+<div class="card">
+<button onclick="calculateQuote()">Calculate My Quote</button>
+
+<div class="result-box" id="results">
+<h3>Your Project Quote</h3>
+<div class="result-line"><span>Base cost (hours x rate)</span><span id="baseCost">-</span></div>
+<div class="result-line"><span>Complexity adjustment</span><span id="complexityAdj">-</span></div>
+<div class="result-line"><span>Revision buffer</span><span id="revisionCost">-</span></div>
+<div class="result-line"><span>Direct expenses</span><span id="expenseCost">-</span></div>
+<div class="result-line"><span>Rush fee</span><span id="rushCost">-</span></div>
+<div class="result-line total"><span>Suggested quote</span><span id="totalQuote">-</span></div>
+<small>This is your minimum. Many freelancers add 10-20% on top as a negotiation buffer. Never quote below this number.</small>
+
+<div class="phase-box">
+<strong>Suggested payment structure:</strong>
+<div class="result-line"><span>Upfront deposit (40%)</span><span id="deposit">-</span></div>
+<div class="result-line"><span>Milestone payment (40%)</span><span id="milestone">-</span></div>
+<div class="result-line"><span>Final payment (20%)</span><span id="finalPay">-</span></div>
+</div>
+
+<div class="phase-box">
+<strong>Free tip:</strong> After the client accepts, send a professional invoice with our
+<a href="invoice-generator.html">Invoice Generator</a>, and check your tax with the
+<a href="tax-estimator.html">Tax Estimator</a>.
+</div>
+</div>
+</div>
+
+<div class="card">
+<h2>How This Calculator Works</h2>
+<p style="font-size:.95rem;color:#555;">
+1. You enter your estimated hours and hourly rate.<br>
+2. The project type and complexity multiply your base cost.<br>
+3. Revision buffer, expenses and rush fee are added on top.<br>
+4. You get a minimum quote plus a safe payment structure (40/40/20).
+</p>
+<table>
+<tr><th>Project stage</th><th>Payment</th></tr>
+<tr><td>Before work starts</td><td>40% deposit - never start without it</td></tr>
+<tr><td>Mid-project demo</td><td>40% milestone payment</td></tr>
+<tr><td>Final delivery</td><td>20% before handing over final files</td></tr>
+</table>
+</div>
+
+<!-- AD SLOT 2: paste your AdSense code here when approved -->
+
+<footer>
+<p>Related reading: <a href="project-quote-guide.html">How to Quote Freelance Projects - Complete Guide</a></p>
+<p><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy Policy</a></p>
+<p>ToolsKitPro - Free online tools for freelancers. Results are estimates only, not financial advice.</p>
+</footer>
+</div>
+
+<script>
+function fmt(n){return "$" + n.toLocaleString("en-US",{maximumFractionDigits:0});}
+
+function calculateQuote(){
+var hours=parseFloat(document.getElementById("hours").value);
+var rate=parseFloat(document.getElementById("rate").value);
+if(!hours||hours<=0||!rate||rate<=0){
+alert("Please enter your estimated hours and hourly rate.");
+return;
+}
+var typeMult=parseFloat(document.getElementById("projectType").value);
+var compMult=parseFloat(document.getElementById("complexity").value);
+var revision=parseFloat(document.getElementById("revisions").value);
+var expenses=parseFloat(document.getElementById("expenses").value)||0;
+var rushMult=parseFloat(document.getElementById("rush").value);
+
+var base=hours*rate;
+var withType=base*typeMult;
+var withComp=withType*compMult;
+var subtotal=withComp+revision+expenses;
+var rush=subtotal*rushMult;
+var total=subtotal+rush;
+
+document.getElementById("baseCost").textContent=fmt(base);
+document.getElementById("complexityAdj").textContent=fmt(withComp-base);
+document.getElementById("revisionCost").textContent=fmt(revision);
+document.getElementById("expenseCost").textContent=fmt(expenses);
+document.getElementById("rushCost").textContent=fmt(rush);
+document.getElementById("totalQuote").textContent=fmt(total);
+document.getElementById("deposit").textContent=fmt(total*0.4);
+document.getElementById("milestone").textContent=fmt(total*0.4);
+document.getElementById("finalPay").textContent=fmt(total*0.2);
+document.getElementById("results").style.display="block";
+document.getElementById("results").scrollIntoView({behavior:"smooth"});
+}
+</script>
+</body>
+</html>

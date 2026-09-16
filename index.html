@@ -1,278 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToolsKitPro | Free Online Calculators & Tools for Freelancers</title>
-    <meta name="description" content="Free online calculators and tools for freelancers, self-employed professionals, and independent workers in the US, UK, and Canada. No signup required.">
-    <meta name="keywords" content="freelance tools, online calculators, hourly rate calculator, freelancer resources, self employed tools">
-    <meta name="author" content="ToolsKitPro">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://toolskitpro.github.io/freelance-tools/">
-    <meta name="google-site-verification" content="G2RvYUgEXyJfkkbSqS1L2VYKGgGc_I3PPemjuFxNY9I" />
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            color: #333;
-        }
-        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
-        header {
-            text-align: center;
-            color: white;
-            padding: 50px 20px 30px;
-        }
-        header h1 { font-size: 2.8rem; margin-bottom: 12px; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-        header p { font-size: 1.2rem; opacity: 0.95; max-width: 600px; margin: 0 auto; line-height: 1.6; }
-        .stats-bar {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 25px;
-            flex-wrap: wrap;
-        }
-        .stat { text-align: center; }
-        .stat .num { font-size: 1.8rem; font-weight: 800; }
-        .stat .label { font-size: 0.9rem; opacity: 0.9; }
-
-        .ad-slot {
-            background: rgba(255,255,255,0.15);
-            border: 2px dashed rgba(255,255,255,0.3);
-            text-align: center;
-            padding: 15px;
-            margin: 20px auto;
-            max-width: 728px;
-            border-radius: 8px;
-            color: rgba(255,255,255,0.7);
-            font-size: 0.85rem;
-        }
-
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
-        }
-        .tool-card {
-            background: white;
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-        .tool-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        }
-        .tool-icon { font-size: 2.5rem; margin-bottom: 15px; }
-        .tool-card h3 { color: #764ba2; font-size: 1.3rem; margin-bottom: 10px; }
-        .tool-card p { color: #666; line-height: 1.6; font-size: 0.95rem; }
-        .tool-card .tag {
-            display: inline-block;
-            background: #f0e6ff;
-            color: #764ba2;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-top: 12px;
-        }
-        .tool-card.coming-soon {
-            opacity: 0.6;
-            pointer-events: none;
-        }
-
-        .features {
-            background: white;
-            border-radius: 16px;
-            padding: 40px;
-            margin: 30px 0;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        }
-        .features h2 { color: #764ba2; margin-bottom: 25px; text-align: center; font-size: 1.6rem; }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        .feature-item {
-            text-align: center;
-            padding: 20px;
-        }
-        .feature-item .icon { font-size: 2rem; margin-bottom: 10px; }
-        .feature-item h4 { color: #333; margin-bottom: 8px; }
-        .feature-item p { color: #777; font-size: 0.9rem; }
-
-        .ad-slot-dark {
-            background: rgba(0,0,0,0.2);
-            border: 2px dashed rgba(255,255,255,0.3);
-            text-align: center;
-            padding: 15px;
-            margin: 20px auto;
-            max-width: 728px;
-            border-radius: 8px;
-            color: rgba(255,255,255,0.7);
-            font-size: 0.85rem;
-        }
-
-        footer {
-            text-align: center;
-            color: white;
-            padding: 40px 20px 20px;
-            font-size: 0.9rem;
-            opacity: 0.85;
-        }
-        footer a { color: #ffd700; text-decoration: none; margin: 0 10px; }
-        footer a:hover { text-decoration: underline; }
-        .footer-links { margin-bottom: 15px; }
-
-        @media (max-width: 600px) {
-            header h1 { font-size: 2rem; }
-            header p { font-size: 1rem; }
-            .tools-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ToolsKitPro - Free Online Calculators and Tools for Freelancers</title>
+<meta name="description" content="Free online tools for freelancers: hourly rate calculator, invoice generator, tax estimator and project quote calculator. Fast, private and mobile friendly.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://toolskitpro.github.io/freelance-tools/"/>
+<meta name="google-site-verification" content="G2RvYUgEXyJfkkbSqS1L2VYKGgGc_I3PPemjuFxNY9I"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial,Helvetica,sans-serif;background:#f5f7fa;color:#333;line-height:1.6;}
+.container{max-width:900px;margin:0 auto;padding:20px;}
+header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:35px 20px;text-align:center;border-radius:0 0 12px 12px;margin-bottom:25px;}
+header h1{font-size:1.8rem;margin-bottom:8px;}
+header p{opacity:.92;font-size:.95rem;max-width:600px;margin:0 auto;}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:22px 0;}
+.tool-card{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 10px rgba(0,0,0,.06);text-decoration:none;color:inherit;display:block;transition:transform .15s ease;}
+.tool-card:hover{transform:translateY(-3px);}
+.tool-card.coming-soon{opacity:.6;cursor:default;}
+.tool-card.coming-soon:hover{transform:none;}
+.tool-icon{width:52px;height:52px;border-radius:12px;background:#f0edfa;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:12px;}
+.tool-card h3{color:#4a3b8c;margin-bottom:6px;font-size:1.05rem;}
+.tool-card p{font-size:.88rem;color:#666;margin-bottom:10px;}
+.tag{display:inline-block;font-size:.7rem;font-weight:bold;padding:4px 12px;border-radius:20px;background:#e6f7ec;color:#1a9e50;letter-spacing:.5px;}
+.tag.soon{background:#f2f2f2;color:#888;}
+.card{background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 10px rgba(0,0,0,.06);margin-bottom:20px;}
+.card h2{color:#764ba2;margin-bottom:12px;font-size:1.25rem;}
+.card p,.card li{font-size:.95rem;color:#555;}
+.card ul{margin-left:20px;}
+.ad-slot{background:#fafafa;border:2px dashed #ccc;border-radius:8px;text-align:center;padding:14px;margin:20px 0;color:#999;font-size:.85rem;}
+/* ---------- FOOTER: yahan sab kuch saaf aur chamakta hua ---------- */
+footer{background:linear-gradient(135deg,#4a3b8c,#5a4a9e);color:#fff;padding:35px 20px 25px;text-align:center;border-radius:12px 12px 0 0;margin-top:25px;}
+footer h2{color:#ffd166;font-size:1.2rem;margin-bottom:6px;}
+footer .guides-intro{color:#d9d2f0;font-size:.85rem;margin-bottom:14px;}
+.guides-list{list-style:none;margin:0 auto 20px;max-width:420px;text-align:left;}
+.guides-list li{margin-bottom:10px;}
+.guides-list a{color:#ffffff;font-weight:bold;text-decoration:underline;text-decoration-color:#ffd166;font-size:.95rem;display:block;padding:9px 14px;background:rgba(255,255,255,.1);border-radius:8px;border:1px solid rgba(255,255,255,.2);}
+.guides-list a:hover{background:rgba(255,255,255,.22);}
+.footer-links{margin:8px 0 14px;}
+.footer-links a{color:#ffd166;font-weight:bold;text-decoration:none;margin:0 10px;font-size:.95rem;white-space:nowrap;}
+.footer-links a:hover{text-decoration:underline;}
+footer .copyright{color:#c9c2e8;font-size:.82rem;margin-bottom:4px;}
+footer .note{color:#a99fd6;font-size:.78rem;}
+@media(max-width:600px){.container{padding:12px;}header h1{font-size:1.4rem;}.footer-links a{margin:0 6px;font-size:.88rem;}}
+</style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🛠️ ToolsKitPro</h1>
-            <p>Free, accurate online calculators and tools built for freelancers, self-employed professionals, and independent workers across the US, UK, and Canada.</p>
-            <div class="stats-bar">
-                <div class="stat"><div class="num">100%</div><div class="label">Free Forever</div></div>
-                <div class="stat"><div class="num">0</div><div class="label">Signups Needed</div></div>
-                <div class="stat"><div class="num">3</div><div class="label">Countries Covered</div></div>
-                <div class="stat"><div class="num">∞</div><div class="label">Calculations</div></div>
-            </div>
-        </header>
+<header>
+<h1>ToolsKitPro</h1>
+<p>Free online calculators and tools for freelancers. No sign up, no cost. Works on phones, tablets and desktops.</p>
+</header>
 
-        <!-- ADSENSE AD SLOT #1: Top Banner (728x90 or responsive) -->
-        <div class="ad-slot" id="ad-slot-top">
-            📢 AdSense Ad Slot #1 — Paste your AdSense code here<br>
-            <small>Recommended: Responsive display ad or 728x90 leaderboard</small>
-        </div>
+<div class="container">
 
-        <div class="tools-grid">
-            <a href="freelance-hourly-rate-calculator.html" class="tool-card">
-                <div class="tool-icon">💰</div>
-                <h3>Freelance Hourly Rate Calculator</h3>
-                <p>Calculate your ideal hourly rate based on your salary goals, taxes, expenses, and vacation time. Supports USD, GBP, and CAD.</p>
-                <span class="tag">LIVE NOW</span>
-            </a>
+<!-- AD SLOT 1: jab AdSense approve ho jaye to apna code yahan paste karna -->
 
-            <a href="invoice-generator.html" class="tool-card">
-                <div class="tool-icon">📄</div>
-                <h3>Invoice Generator (PDF)</h3>
-                <p>Create professional PDF invoices in seconds. Add your logo, client details, line items, and download instantly.</p>
-                <span class="tag">LIVE NOW</span>
-            </a>
+<div class="card">
+<h2>Free Tools</h2>
+<div class="tools-grid">
 
-            <a href="tax-estimator.html" class="tool-card">
-                <div class="tool-icon">📊</div>
-                <h3>Self-Employment Tax Estimator</h3>
-                <p>Estimate your tax liability for US, UK, and Canada. Factor in federal, state, and self-employment taxes.</p>
-                <span class="tag">LIVE NOW</span>
-            </a>
+<a href="freelance-hourly-rate-calculator.html" class="tool-card">
+<div class="tool-icon">$</div>
+<h3>Freelance Hourly Rate Calculator</h3>
+<p>Find the hourly rate you really need. Covers your salary, taxes, expenses and unpaid time.</p>
+<span class="tag">LIVE NOW</span>
+</a>
 
-            <div class="tool-card coming-soon">
-                <div class="tool-icon">🎯</div>
-                <h3>Project Quote Calculator</h3>
-                <p>Price your freelance projects confidently. Calculate fixed-price quotes based on scope, complexity, and timeline.</p>
-                <span class="tag">COMING SOON</span>
-            </div>
+<a href="invoice-generator.html" class="tool-card">
+<div class="tool-icon">#</div>
+<h3>Invoice Generator (PDF)</h3>
+<p>Create a professional PDF invoice in seconds. Add your details, line items and download instantly.</p>
+<span class="tag">LIVE NOW</span>
+</a>
 
-            <div class="tool-card coming-soon">
-                <div class="tool-icon">🌍</div>
-                <h3>Client Time Zone Planner</h3>
-                <p>Plan meetings across time zones. Convert your local time to your client's time zone instantly.</p>
-                <span class="tag">COMING SOON</span>
-            </div>
+<a href="tax-estimator.html" class="tool-card">
+<div class="tool-icon">%</div>
+<h3>Self-Employment Tax Estimator</h3>
+<p>Estimate your income tax for USA, UK and Canada based on 2026 rules.</p>
+<span class="tag">LIVE NOW</span>
+</a>
 
-            <div class="tool-card coming-soon">
-                <div class="tool-icon">🏦</div>
-                <h3>Freelance Savings Planner</h3>
-                <p>Plan for irregular income. Set savings goals, emergency funds, and tax reserves based on your freelance earnings.</p>
-                <span class="tag">COMING SOON</span>
-            </div>
+<a href="quote-calculator.html" class="tool-card">
+<div class="tool-icon">=</div>
+<h3>Project Quote Calculator</h3>
+<p>Price any freelance project with confidence. Includes payment structure guide.</p>
+<span class="tag">LIVE NOW</span>
+</a>
 
-            <div class="tool-card coming-soon">
-                <div class="tool-icon">📝</div>
-                <h3>Contract Template Generator</h3>
-                <p>Generate basic freelance agreement templates. Customize clauses, payment terms, and deliverables.</p>
-                <span class="tag">COMING SOON</span>
-            </div>
-        </div>
-
-        <!-- ADSENSE AD SLOT #2: Middle Banner -->
-        <div class="ad-slot-dark" id="ad-slot-middle">
-            📢 AdSense Ad Slot #2 — Paste your AdSense code here<br>
-            <small>Recommended: Responsive display ad or 336x280 large rectangle</small>
-        </div>
-
-        <div class="features">
-            <h2>Why Freelancers Choose ToolsKitPro</h2>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <div class="icon">🔒</div>
-                    <h4>100% Private</h4>
-                    <p>All calculations happen in your browser. We never store your financial data.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="icon">⚡</div>
-                    <h4>Instant Results</h4>
-                    <p>No loading screens, no waiting. Get answers in milliseconds.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="icon">📱</div>
-                    <h4>Mobile Friendly</h4>
-                    <p>Works perfectly on phones, tablets, and desktops.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="icon">🌐</div>
-                    <h4>Multi-Currency</h4>
-                    <p>Support for USD, GBP, and CAD with country-specific tax rates.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- ADSENSE AD SLOT #3: Bottom Banner -->
-        <div class="ad-slot-dark" id="ad-slot-bottom">
-            📢 AdSense Ad Slot #3 — Paste your AdSense code here<br>
-            <small>Recommended: Responsive display ad or 728x90 leaderboard</small>
-        </div>
-
-        <footer>
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="admin.html">🔐 Admin</a>
-            </div>
-            <p>© 2026 ToolsKitPro. Built for freelancers worldwide.</p>
-            <div class="card" style="margin-top:20px;">
-    <h2 style="color:#764ba2; margin-bottom:15px;">📚 Freelance Guides</h2>
-    <ul style="line-height:2; color:#555;">
-        <li><a href="how-to-calculate-freelance-hourly-rate.html" style="color:#667eea; font-weight:600;">How to Calculate Your Freelance Hourly Rate in 2026</a></li>
-        <li><a href="free-invoice-generator-for-freelancers.html" style="color:#667eea; font-weight:600;">Free Invoice Generator for Freelancers: Create PDFs Instantly</a></li>
-        <li><a href="self-employment-tax-guide.html" style="color:#667eea; font-weight:600;">Self-Employment Tax Guide for Freelancers (2026)</a></li>
-    </ul>
+<div class="tool-card coming-soon">
+<div class="tool-icon">@</div>
+<h3>Time Zone Planner</h3>
+<p>Plan meetings with clients in different countries without confusion.</p>
+<span class="tag soon">COMING SOON</span>
 </div>
-        </footer>
-    </div>
 
-    <!-- Google Analytics (Optional - replace GA_MEASUREMENT_ID with your real ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
+<div class="tool-card coming-soon">
+<div class="tool-icon">+</div>
+<h3>Savings Planner</h3>
+<p>Build a savings plan that works with irregular freelance income.</p>
+<span class="tag soon">COMING SOON</span>
+</div>
+
+<div class="tool-card coming-soon">
+<div class="tool-icon">*</div>
+<h3>Contract Generator</h3>
+<p>Create a simple freelance contract template in minutes.</p>
+<span class="tag soon">COMING SOON</span>
+</div>
+
+</div>
+</div>
+
+<!-- AD SLOT 2: jab AdSense approve ho jaye to apna code yahan paste karna -->
+
+<div class="card">
+<h2>Why freelancers use ToolsKitPro</h2>
+<ul>
+<li><strong>100% free</strong> - every tool costs nothing, forever.</li>
+<li><strong>Private</strong> - all calculations happen in your browser. Nothing is sent to any server.</li>
+<li><strong>Mobile friendly</strong> - works perfectly on any phone.</li>
+<li><strong>Made for US, UK and Canada</strong> - tax rates and formats match your country.</li>
+</ul>
+</div>
+
+<!-- AD SLOT 3: jab AdSense approve ho jaye to apna code yahan paste karna -->
+
+<footer>
+<h2>Freelance Guides</h2>
+<p class="guides-intro">Free step by step reading for freelancers:</p>
+<ul class="guides-list">
+<li><a href="how-to-calculate-freelance-hourly-rate.html">How to Calculate Your Freelance Hourly Rate in 2026</a></li>
+<li><a href="free-invoice-generator-for-freelancers.html">Free Invoice Generator for Freelancers: Create PDFs Instantly</a></li>
+<li><a href="self-employment-tax-guide.html">Self-Employment Tax Guide for Freelancers (2026)</a></li>
+<li><a href="project-quote-guide.html">How to Quote Freelance Projects (Step-by-Step Guide)</a></li>
+</ul>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="contact.html">Contact Us</a>
+<a href="admin.html">Admin</a>
+</div>
+<p class="copyright">2026 ToolsKitPro. Built for freelancers worldwide.</p>
+<p class="note">Results are estimates only, not financial advice.</p>
+</footer>
+
+</div>
 </body>
 </html>

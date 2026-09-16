@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Self-Employment Tax Estimator 2026 - Free Calculator for Freelancers (US/UK/Canada)</title>
+<meta name="description" content="Free self-employment tax estimator for freelancers. Calculate estimated taxes for US (IRS), UK (HMRC) and Canada (CRA) in seconds. Updated for 2026 tax rules.">
+<meta name="keywords" content="self employment tax calculator, freelance tax estimator, freelancer tax 2026, IRS tax calculator, HMRC tax estimator, CRA tax calculator">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://toolskitpro.github.io/freelance-tools/tax-estimator.html">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,'Segoe UI',Roboto,Arial,sans-serif; background:#f5f6fa; color:#333; line-height:1.6; }
+  .container { max-width:600px; margin:0 auto; padding:20px; }
+  header { background:linear-gradient(135deg,#667eea,#764ba2); color:#fff; padding:30px 20px; text-align:center; border-radius:0 0 20px 20px; }
+  header h1 { font-size:1.6rem; margin-bottom:8px; }
+  header p { font-size:0.95rem; opacity:0.9; }
+  .card { background:#fff; border-radius:14px; padding:22px; margin-top:20px; box-shadow:0 4px 15px rgba(0,0,0,0.06); }
+  label { display:block; font-weight:600; font-size:0.9rem; margin:14px 0 5px; }
+  select, input[type=number] { width:100%; padding:12px; border:1px solid #ddd; border-radius:10px; font-size:1rem; }
+  select:focus, input:focus { outline:none; border-color:#667eea; }
+  .btn { width:100%; padding:15px; border:none; border-radius:12px; background:linear-gradient(135deg,#667eea,#764ba2); color:#fff; font-size:1.05rem; font-weight:700; cursor:pointer; margin-top:20px; }
+  .btn:active { transform:scale(0.98); }
+  .result { display:none; background:#f0f4ff; border:1px solid #c7d5ff; border-radius:12px; padding:18px; margin-top:20px; }
+  .result.show { display:block; }
+  .result h3 { color:#764ba2; margin-bottom:12px; }
+  .row { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px dashed #ddd; font-size:0.95rem; }
+  .row.total { border-bottom:none; font-weight:700; font-size:1.1rem; color:#333; }
+  .note { font-size:0.82rem; color:#888; margin-top:14px; }
+  .back { display:inline-block; margin-top:20px; color:#667eea; font-weight:600; text-decoration:none; }
+  .ad-slot { margin:20px 0; text-align:center; }
+  footer { text-align:center; padding:30px 15px; font-size:0.85rem; color:#888; }
+  footer a { color:#667eea; text-decoration:none; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Self-Employment Tax Estimator 2026</h1>
+  <p>Estimate your tax for US (IRS), UK (HMRC) and Canada (CRA)</p>
+</header>
+
+<div class="container">
+
+  <div class="ad-slot" id="ad-slot-top">
+    <!-- YAHAN APNI ADSENSE CODE PASTE KAREIN -->
+  </div>
+
+  <div class="card">
+    <label for="country">Country</label>
+    <select id="country">
+      <option value="us">United States</option>
+      <option value="uk">United Kingdom</option>
+      <option value="ca">Canada</option>
+    </select>
+
+    <label for="income">Annual Self-Employment Income ($, GBP or CAD)</label>
+    <input type="number" id="income" placeholder="e.g. 60000" min="0">
+
+    <label for="expenses">Annual Business Expenses</label>
+    <input type="number" id="expenses" placeholder="e.g. 8000" min="0">
+
+    <button class="btn" onclick="calculate()">Calculate My Tax</button>
+
+    <div class="result" id="result">
+      <h3>Your Estimated Tax (2026)</h3>
+      <div class="row"><span>Net Profit</span><span id="netProfit">-</span></div>
+      <div class="row"><span>Income Tax</span><span id="incomeTax">-</span></div>
+      <div class="row"><span id="extraLabel">Self-Employment Tax</span><span id="extraTax">-</span></div>
+      <div class="row total"><span>Total Estimated Tax</span><span id="totalTax">-</span></div>
+      <div class="row total" style="color:#2ecc71;"><span>Take-Home Pay</span><span id="takeHome">-</span></div>
+      <p class="note">Note: These are simplified 2026 estimates only. Tax laws change. Always confirm with a licensed accountant.</p>
+    </div>
+  </div>
+
+  <div class="ad-slot" id="ad-slot-middle">
+    <!-- YAHAN APNI ADSENSE CODE PASTE KAREIN -->
+  </div>
+
+  <div class="card">
+    <h3 style="color:#764ba2; margin-bottom:10px;">Related Freelance Tools</h3>
+    <ul style="line-height:2.1; padding-left:20px;">
+      <li><a href="freelance-hourly-rate-calculator.html" style="color:#667eea; font-weight:600;">Freelance Hourly Rate Calculator</a></li>
+      <li><a href="invoice-generator.html" style="color:#667eea; font-weight:600;">Invoice Generator (PDF)</a></li>
+      <li><a href="how-to-calculate-freelance-hourly-rate.html" style="color:#667eea; font-weight:600;">Guide: How to Calculate Your Hourly Rate</a></li>
+      <li><a href="self-employment-tax-guide.html" style="color:#667eea; font-weight:600;">Self-Employment Tax Guide for Freelancers</a></li>
+    </ul>
+  </div>
+
+  <a href="index.html" class="back">Back to All Tools</a>
+
+  <div class="ad-slot" id="ad-slot-bottom">
+    <!-- YAHAN APNI ADSENSE CODE PASTE KAREIN -->
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 ToolsKitPro | <a href="privacy.html">Privacy Policy</a> | <a href="about.html">About Us</a> | <a href="contact.html">Contact</a></p>
+</footer>
+
+<script>
+function money(n, c) {
+  const sym = c === 'uk' ? 'GBP ' : c === 'ca' ? 'CAD ' : '$';
+  return sym + Math.round(n).toLocaleString();
+}
+
+function calculate() {
+  const country = document.getElementById('country').value;
+  const income = parseFloat(document.getElementById('income').value) || 0;
+  const expenses = parseFloat(document.getElementById('expenses').value) || 0;
+  if (income <= 0) { alert('Please enter your income.'); return; }
+
+  const profit = Math.max(0, income - expenses);
+  let incomeTax = 0, extra = 0, extraName = '';
+
+  if (country === 'us') {
+    // Simplified 2026 single filer brackets
+    const b = profit;
+    incomeTax = b <= 11925 ? b*0.10
+      : b <= 48475 ? 1192.50 + (b-11925)*0.12
+      : b <= 103350 ? 5572.50 + (b-48475)*0.22
+      : 10042 + (b-103350)*0.24;
+    extra = profit * 0.153 * 0.9235; // SE tax (15.3% of 92.35%)
+    extraName = 'Self-Employment Tax (15.3%)';
+  } else if (country === 'uk') {
+    // Simplified 2026/27
+    const taxable = Math.max(0, profit - 12570);
+    incomeTax = taxable <= 37700 ? taxable*0.20 : 7540 + (taxable-37700)*0.40;
+    extra = profit >= 12570 ? Math.min(profit-12570, 50270) * 0.06 : 0; // Class 4 NIC approx
+    extraName = 'Class 4 NIC (approx)';
+  } else if (country === 'ca') {
+    // Simplified federal after basic personal amount
+    const taxable = Math.max(0, profit - 16129);
+    incomeTax = taxable <= 55867 ? taxable*0.15
+      : taxable <= 111733 ? 8380 + (taxable-55867)*0.205
+      : 17471 + (taxable-111733)*0.26;
+    extra = profit * 0.098; // CPP self-employed approx
+    extraName = 'CPP Contributions (approx)';
+  }
+
+  const total = incomeTax + extra;
+  const takeHome = profit - total;
+
+  document.getElementById('netProfit').textContent = money(profit, country);
+  document.getElementById('incomeTax').textContent = money(incomeTax, country);
+  document.getElementById('extraLabel').textContent = extraName;
+  document.getElementById('extraTax').textContent = money(extra, country);
+  document.getElementById('totalTax').textContent = money(total, country);
+  document.getElementById('takeHome').textContent = money(takeHome, country);
+  document.getElementById('result').classList.add('show');
+  document.getElementById('result').scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
